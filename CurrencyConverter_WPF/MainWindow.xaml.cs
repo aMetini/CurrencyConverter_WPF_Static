@@ -65,7 +65,7 @@ namespace CurrencyConverter_WPF
             //Variable ConvertedValue with double data type to store currency converted value
             double convertedValue;
 
-            //Check amount textbox is Null or Blank
+            //Error handling to check txtCurrency textbox is Null or Blank
             if (txtCurrency.Text == null || txtCurrency.Text.Trim() == "")
             {
                 //If amount textbox is Null or Blank it will show the below message box   
@@ -95,6 +95,8 @@ namespace CurrencyConverter_WPF
                 cmbToCurrency.Focus();
                 return;
             }
+
+            //lblCurrency.Content = txtCurrency.Text;
             //If From and To Combobox selected values are the same
             if (cmbFromCurrency.Text == cmbToCurrency.Text)
             {
